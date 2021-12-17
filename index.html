@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!--BOOTSTRAP-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+</head>
+
+<body onload="request()">
+  <div id="container" class="doc-list-container"></div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img class="img-fluid full-view-banner" src="./img/Screenshot 2021-11-12 125544.png">
+          <div class="d-flex justify-content-between align-items-center profile">
+            <div class="d-flex gap-3 profile-img-name">
+              <img id="img" class="profile-img-fullview" src="">
+              <div>
+                <div id="title-name"></div>
+                <h2><span id="first-name"></span><span id="last-name"></span></h2>
+                <span id="specialities"></span>
+              </div>
+            </div>
+            <div class="rating-fullview d-flex justify-content-between flex-column">
+              <div class="d-flex justify-content-end">
+                <div class="d-flex justify-content-between aling-items-center gap-2 fs-5">Note<span
+                    class="rating-nr">1,0</span></div>
+              </div>
+              <a class="d-flex gap-2 align-items-center"><i class="far fa-comment-alt"></i>Bewertungen</a>
+            </div>
+          </div>
+          <hr />
+          <div class="d-flex justify-content-between align-items-center profile-info">
+            <a href="" class="d-flex align-items-center gap-2"><i class="fas fa-phone-alt "></i>123252352352</a>
+            <a href="" class="d-flex align-items-center gap-2"><i class="fas fa-home"></i>mkg-alsterdorf.de</a>
+            <div class="d-flex align-items-center gap-2">
+              <i class="far fa-address-card"></i>
+              <div class="d-flex flex-column gab-2">
+                <span class="d-flex gap-2 align-items-center">Gesetzliche Versicherte<i
+                    class="fas fa-check green-font"></i></span>
+                <span class="d-flex gap-2 align-items-center">Privatversicherte<i
+                    class="fas fa-check green-font"></i></span>
+              </div>
+            </div>
+            <button class="btn btn-primary d-flex align-items-center gap-2">
+              <i class="fas fa-pencil-alt"></i>Bewerten
+            </button>
+          </div>
+          <hr>
+          <div class="d-flex gap-2  py-2">
+            <h4 class="time-title d-flex gap-2 align-items-center"> <i class="far fa-clock"></i>Sprechzeiten</h4> <span
+              class="open-state">Jetzt geöffnet</span>
+          </div>
+          <div class="d-flex justify-content-between gap-2 time-cards">
+            <div class="day-card d-flex flex-column text-center gap-1">
+              <span class="f-size-time-card">MO</span>
+              <span id="openinghours-mo" class="time-format"></span>
+            </div>
+            <div class="day-card d-flex flex-column text-center gap-1">
+              <span class="f-size-time-card">DI</span>
+              <span class="time-format" id="openinghours-di"></span>
+            </div>
+            <div class="day-card d-flex flex-column text-center gap-1">
+              <span class="f-size-time-card">MI</span>
+              <span id="openinghours-mi" class="time-format"></span>
+            </div>
+            <div class="day-card d-flex flex-column text-center gap-1">
+              <span class="f-size-time-card">DO</span>
+              <span id="openinghours-do" class="time-format"></span>
+            </div>
+            <div class="day-card d-flex flex-column text-center gap-1">
+              <span class="f-size-time-card">FR</span>
+              <span id="openinghours-fr" class="time-format"></span>
+            </div>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between align-items-center gap-3 location">
+            <div>
+              <h4 class="time-title d-flex gap-2 align-items-center"> <i class="fas fa-map-marker-alt"></i></i>Addresse
+              </h4>
+              <div class="d-flex flex-column ms-3">
+                <span id="street"></span>
+                <div>
+                  <span id="zipcode"></span>
+                  <span id="city"></span>
+                </div>
+              </div>
+            </div>
+            <div class="iframe">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21323.05945687809!2d11.494043790611778!3d48.08356223960276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479dd9380b6b18af%3A0x5fdb274d8e647ccc!2sThalkirchen-Obersendling-Forstenried-F%C3%BCrstenried-Solln%2C%20M%C3%BCnchen!5e0!3m2!1sde!2sde!4v1636728769935!5m2!1sde!2sde"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
+<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
