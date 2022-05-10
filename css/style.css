@@ -3,12 +3,8 @@ body {
   justify-content: center;
   min-height: 100vh;
   max-width: 100vw;
-  background-color: rgba(187, 179, 179, 0.418);
+  background-color: rgba(188, 180, 180, 0.197);
 }
-
-/* .card {
-  width: 100px !important;
-} */
 
 a {
   text-decoration: none;
